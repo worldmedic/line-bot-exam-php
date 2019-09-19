@@ -44,7 +44,7 @@ if ( sizeof($request_array['events']) > 0 )
  }
 }
 
-echo "OK";
+echo "OK22222222";
 
 function send_reply_message($url, $post_header, $post_body)
 {
