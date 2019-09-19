@@ -49,7 +49,7 @@ if ( sizeof($request_array['events']) > 0 )
  }
 }
 
-echo "OK22222222";
+echo "OK NAJA";
 
 function send_reply_message($url, $post_header, $post_body)
 {
