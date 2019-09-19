@@ -27,7 +27,11 @@ if ( sizeof($request_array['events']) > 0 )
   
   }
   else
-   $reply_message = 'ระบบได้รับ Event '.ucfirst($event['type']).' ของคุณแล้ว';
+   //$reply_message = 'ระบบได้รับ Event '.ucfirst($event['type']).' ของคุณแล้ว';
+  
+  $text = $event['source']['userId'];
+			// Get replyToken
+			$replyToken = $event['replyToken'];
  
   if( strlen($reply_message) > 0 )
   {
