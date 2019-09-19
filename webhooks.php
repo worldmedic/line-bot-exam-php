@@ -19,7 +19,8 @@ if ( sizeof($request_array['events']) > 0 )
   {
    if( $event['message']['type'] == 'text' )
    {
-    $text = $event['message']['text'];
+    //$text = $event['message']['text'];
+    $text = $event['source']['userId'];
     $reply_message = 'ระบบได้รับข้อความ ('.$text.') ของคุณแล้ว';
    }
    else
