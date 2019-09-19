@@ -1,6 +1,6 @@
 <?php
 
-
+$text = $_GET['text'];
 
 require "vendor/autoload.php";
 
@@ -13,7 +13,7 @@ $pushID = 'U2f0db3cc9460f12cdf281b73206e35fc';
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($text);
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
