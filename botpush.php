@@ -1,6 +1,7 @@
 <?php
 
 $text = $_GET['text'];
+$uid = $_GET['uid'];
 
 require "vendor/autoload.php";
 
@@ -8,7 +9,7 @@ $access_token = 'WbW1HjRllwbfP9bN6AwGCcmZ6Gk4sFM5hsoKdARj0LfEVwXKJn7u7Gv3lBJaY4O
 
 $channelSecret = '3a6bb1a5a12e5acf388c0a1d57edd684';
 
-$pushID = 'U2f0db3cc9460f12cdf281b73206e35fc';
+$pushID = $uid;
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
